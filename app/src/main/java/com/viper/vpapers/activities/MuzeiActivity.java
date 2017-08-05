@@ -1,10 +1,10 @@
-package org.viperos.vpapers.activities;
+package com.viper.vpapers.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.dm.wallpaper.board.activities.WallpaperBoardMuzeiActivity;
-import org.viperos.vpapers.services.MuzeiService;
+import com.viper.vpapers.services.MuzeiService;
 
 public class MuzeiActivity extends WallpaperBoardMuzeiActivity {
 

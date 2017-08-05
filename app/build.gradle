@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion rootProject.ext.CompileSdk
@@ -15,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.viperos.vpapers"
+        applicationId "com.viper.vpapers"
         minSdkVersion rootProject.ext.MinSdk
         targetSdkVersion rootProject.ext.TargetSdk
         versionCode 44
@@ -52,8 +51,4 @@ dependencies {
      * 6. Done
      */
     compile project(':library')
-    compile 'com.google.firebase:firebase-core:10.2.6'
-    compile 'com.google.firebase:firebase-crash:10.2.6'
-    compile 'com.google.firebase:firebase-messaging:10.2.6'
-    compile 'com.firebase:firebase-jobdispatcher:0.5.2'
 }

@@ -12,7 +12,6 @@ import com.danimahardhika.android.helpers.permission.PermissionHelper;
 import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.applications.WallpaperBoardApplication;
 import com.dm.wallpaper.board.helpers.CrashReportHelper;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 
 import java.io.File;
 
@@ -47,8 +46,6 @@ public class WallpaperBoardCrashReport extends AppCompatActivity {
                 finish();
                 return;
             }
-
-            LocaleHelper.setLocale(this);
 
             final String email = WallpaperBoardApplication.getConfiguration().getCrashReportEmail();
             if (email == null) {

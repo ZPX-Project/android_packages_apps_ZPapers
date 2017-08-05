@@ -153,9 +153,6 @@
     <string name="about_dashboard_dev_github_url">https://github.com/danimahardhika</string>
     <string name="about_dashboard_dev_instagram_url">https://www.instagram.com/_u/danimahardhika112/</string>
 
-    <!-- Splash screen -->
-    <string name="splash_screen_title">Wallpaper Board</string>
-
     <!-- DrawerToggle -->
     <string name="txt_open">Aberto</string>
     <string name="txt_close">Fechado</string>

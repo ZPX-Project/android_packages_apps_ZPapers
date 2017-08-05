@@ -79,9 +79,7 @@ public class Setting {
    public enum Type {
        HEADER,
        CACHE,
-       THEME,
        WALLPAPER,
-       LANGUAGE,
        COLORED_CARD,
        RESET_TUTORIAL
    }

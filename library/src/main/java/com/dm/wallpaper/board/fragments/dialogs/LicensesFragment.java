@@ -16,7 +16,6 @@ import android.webkit.WebView;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.R2;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.helpers.TypefaceHelper;
 import com.dm.wallpaper.board.utils.LogUtil;
 
@@ -140,7 +139,6 @@ public class LicensesFragment extends DialogFragment {
                     mWebView.setVisibility(View.VISIBLE);
                     mWebView.loadDataWithBaseURL(null,
                             sb.toString(), "text/html", "utf-8", null);
-                    LocaleHelper.setLocale(getActivity());
                 }
                 mLoadLicenses = null;
             }

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto"
-    package="org.viperos.vpapers">
+    package="com.viper.vpapers">
 
     <!-- If you are not using donation and premium request, you need to remove BILLING permission
     <uses-permission android:name="com.android.vending.BILLING" />-->
@@ -21,23 +21,12 @@
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppThemeDark"
         tools:replace="android:icon"
-        android:name="org.viperos.vpapers.applications.WallpaperBoard">
-
-        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
- +     See README(https://goo.gl/l4GJaQ) for more. -->
-        <meta-data
-        android:name="com.google.firebase.messaging.default_notification_icon"
-        android:resource="@drawable/ic_aex" />
-        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
- +      notification message. See README(https://goo.gl/6BKBk7) for more. -->
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_color"
-        android:resource="@color/colorAccent" />
+        android:name="com.viper.vpapers.applications.WallpaperBoard">
 
 
-        <activity android:name="org.viperos.vpapers.activities.SplashActivity"
+        <activity android:name="com.viper.vpapers.activities.SplashActivity"
             android:launchMode="singleTop"
             android:noHistory="true"
             android:screenOrientation="portrait"
@@ -46,26 +35,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <service
-                android:name=".MyFirebaseMessagingService">
-                <intent-filter>
-                    <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-                </intent-filter>
-            </service>
-
-            <service
-                android:name=".MyFirebaseInstanceIDService">
-                <intent-filter>
-                    <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-                </intent-filter>
-            </service>
 
         </activity>
 
         <activity
-            android:name="org.viperos.vpapers.activities.MainActivity"
+            android:name="com.viper.vpapers.activities.MainActivity"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppThemeDark"
             android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,13 +54,13 @@
 
         </activity>
 
-        <activity android:name="org.viperos.vpapers.activities.MuzeiActivity"
+        <activity android:name="com.viper.vpapers.activities.MuzeiActivity"
             android:label="@string/muzei_settings"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppThemeDark"
             android:exported="true"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <service android:name="org.viperos.vpapers.services.MuzeiService"
+        <service android:name="com.viper.vpapers.services.MuzeiService"
             android:label="@string/muzei_art_source_name"
             android:description="@string/muzei_art_source_desc"
             android:icon="@drawable/ic_muzei_logo"
@@ -94,7 +70,7 @@
             </intent-filter>
             <meta-data android:name="color" android:value="@color/muzei_color" />
             <meta-data android:name="settingsActivity"
-                android:value="org.viperos.vpapers.activities.MuzeiActivity"/>
+                android:value="com.viper.vpapers.activities.MuzeiActivity"/>
         </service>
 
         <!-- This is important -->

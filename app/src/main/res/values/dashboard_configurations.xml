@@ -7,9 +7,16 @@
     <!-- ============================== DASHBOARD CONFIGURATIONS =============================== -->
     <!-- ======================================================================================= -->
 
+
+
     <!-- CONFIG: APPLICATION NAME -->
 
-    <string name="app_name">VPapers</string>
+    <string name="app_name" translatable="false">VPapers</string>
+
+    <!-- CONFIG: MUZEI -->
+
+    <!-- Muzei art source name -->
+    <string name="muzei_art_source_name" translatable="false">VPapers</string>
 
     <!-- Enable or disable shadow
     * Include:
@@ -18,19 +25,8 @@
 
     <!-- CONFIG: MUZEI -->
 
-    <!-- Muzei art source name -->
-    <string name="muzei_art_source_name">VPapers</string>
-
-    <!-- Muzei art source description -->
-    <string name="muzei_art_source_desc">Walls branded for ViperOS ROM</string>
-
     <!-- Muzei base color -->
     <color name="muzei_color">@android:color/black</color>
-
-    <!-- CONFIG: TOOLBAR -->
-
-    <!-- Toolbar title -->
-    <string name="toolbar_title">VPapers</string>
 
     <!-- CONFIG: Wallpapers -->
 
@@ -38,17 +34,14 @@
     * If you don't want to use custom crash report, just set dev_email to empty
     * example: <string name="dev_email"></string>
     * Default crash report will be used, you can check crash report from developer console -->
-    <string name="dev_email">coolsks94@gmail.com</string>
+    <string name="dev_email" translatable="false"></string>
 
     <!-- Wallpaper json link -->
-    <string name="wallpaper_json">https://raw.githubusercontent.com/Andersonmendes2016/VPapers/nougat/app/json/wallpaper_config.json</string>
+    <string name="wallpaper_json" translatable="false">https://raw.githubusercontent.com/Andersonmendes2016/VPapers/nougat/app/json/wallpaper_config.json</string>
 
     <!-- Allow to download wallpaper
     * If disabled user only able to apply wallpaper from dashboard -->
     <bool name="enable_wallpaper_download">true</bool>
-
-
-    <string name="splash_screen_title">VIPEROS PAPERS</string>
 
     <!-- Wallpapers grid preview quality
     * Image quality when displaying wallpapers in grid
@@ -69,19 +62,14 @@
     * ex: navigation_view_header.png -> navigation_view_header
     * If you want to use solid color, you can put hex color code here
     * ex: <string name="navigation_view_header">#000000</string> -->
-    <string name="navigation_view_header">http://i.imgur.com/w3wuOIl.jpg</string>
+    <string name="navigation_view_header" translatable="false">navigation_view_header</string>
 
     <!-- Navigation view header style
     * Available choices:
     * mini
     * normal
     -->
-    <string name="navigation_view_header_style">mini</string>
-
-    <!-- Navigation view header text
-    * Leave empty if you don't want to show any text -->
-    <string name="navigation_view_header_title">ViperOS Wallpapers</string>
-
+    <string name="navigation_view_header_style" translatable="false">mini</string>
 
     <!-- CONFIG: ABOUT -->
 
@@ -91,21 +79,13 @@
     * just put image name here without the extension (ex: about_image.png -> about_image)
     * If you want to use solid color, you can put hex color code here
     * ex: <string name="about_image">#000000</string> -->
-    <string name="about_image">http://i.imgur.com/Q2FxZ2K.png</string>
+    <string name="about_image" translatable="false">about_image</string>
 
     <!-- About profile image
     * If you want to use image from url, just put the url here
     * If you want to use image stored in project (drawable folder)
     * just put image name here without the extension (ex: about_profile_image.png -> about_profile_image) -->
-    <string name="about_profile_image">http://i.imgur.com/WFXseT2.png</string>
-
-    <!-- About title above description -->
-    <string name="about_title">VPapers</string>
-
-    <!-- About description below title -->
-    <string name="about_desc"><![CDATA[
-        <b>A wallpaper app for user contributed ViperOS branded walls.<b>
-        ]]></string>
+    <string name="about_profile_image" translatable="false">about_profile_image</string>
 
     <!-- Social link inside about
     * Supported link:
@@ -115,16 +95,16 @@
     * If you don't want to show social link, just set about_social_links to empty
     * ex:
 +    * <string-array name="about_social_links"></string-array>-->
-    <string-array name="about_social_links">
+    <string-array name="about_social_links" translatable="false">
         <item>https://plus.google.com/communities/112731559207528820150</item>
         <item>https://github.com/ViperOS-Project</item>
-        <item>http://vpapers.imgur.com</item>
-        <item>viperosbrasil@gmail.com</item>
+        <item>https://viper-os.com</item>
+        <item></item>
     </string-array>
 
     <!-- Contributors dialog
     * Take a look inside values/xml/contributors.xml to add contributors -->
-    <bool name="show_contributors_dialog">true</bool>
+    <bool name="show_contributors_dialog">false</bool>
 
     <!-- CONFIG: DONATE -->
 
@@ -135,5 +115,9 @@
     <bool name="enable_donation">false</bool>
 
     <!-- Take a look inside License.java for donation product -->
+    <!-- CONFIG: ABOUT -->
+
+    <!-- About title above description -->
+    <string name="about_title">VPapers</string>
 
 </resources>

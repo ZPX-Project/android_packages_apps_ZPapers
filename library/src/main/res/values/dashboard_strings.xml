@@ -115,8 +115,6 @@
     <string name="pref_wallpaper_location">Wallpaper Save Location</string>
     <string name="pref_wallpaper_location_desc">Try to download at least one wallpaper first</string>
 
-    <string name="pref_language_header">Language</string>
-
     <string name="pref_others_header">Others</string>
     <string name="pref_others_colored_wallpaper_card">Colored Wallpaper Card</string>
     <string name="pref_others_reset_tutorial">Reset Tutorial</string>
@@ -154,9 +152,6 @@
     <string name="about_dashboard_dev_google_plus_url">https://plus.google.com/u/1/+DaniMahardhika</string>
     <string name="about_dashboard_dev_github_url">https://github.com/danimahardhika</string>
     <string name="about_dashboard_dev_instagram_url">https://www.instagram.com/_u/danimahardhika112/</string>
-
-    <!-- Splash screen -->
-    <string name="splash_screen_title">Wallpaper Board</string>
 
     <!-- DrawerToggle -->
     <string name="txt_open">Open</string>

@@ -1,4 +1,4 @@
-package org.viperos.vpapers.licenses;
+package com.viper.vpapers.licenses;
 
 import com.dm.wallpaper.board.items.InAppBilling;
 

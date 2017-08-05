@@ -25,13 +25,11 @@ import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.R2;
 import com.dm.wallpaper.board.fragments.dialogs.FilterFragment;
 import com.dm.wallpaper.board.fragments.dialogs.RefreshDurationFragment;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.preferences.Preferences;
 import com.dm.wallpaper.board.utils.listeners.RefreshDurationListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.dm.wallpaper.board.helpers.ViewHelper.resetViewBottomPadding;
 
@@ -76,8 +74,7 @@ public class WallpaperBoardMuzeiActivity extends AppCompatActivity implements Vi
     private boolean mIsMinute;
 
     public void initMuzeiActivity(@Nullable Bundle savedInstanceState, @NonNull Class<?> muzeiService) {
-        super.setTheme(Preferences.get(this).isDarkTheme() ?
-                R.style.MuzeiThemeDark : R.style.MuzeiTheme);
+        super.setTheme(R.style.MuzeiThemeDark);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muzei);
         ButterKnife.bind(this);
@@ -114,15 +111,13 @@ public class WallpaperBoardMuzeiActivity extends AppCompatActivity implements Vi
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        LocaleHelper.setLocale(newBase);
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(newBase);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         resetViewBottomPadding(mScrollView, false);
-        LocaleHelper.setLocale(this);
     }
 
     @Override

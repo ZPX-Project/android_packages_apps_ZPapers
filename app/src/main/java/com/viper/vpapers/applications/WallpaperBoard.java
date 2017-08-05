@@ -1,4 +1,4 @@
-package org.viperos.vpapers.applications;
+package com.viper.vpapers.applications;
 
 import com.dm.wallpaper.board.applications.WallpaperBoardApplication;
 

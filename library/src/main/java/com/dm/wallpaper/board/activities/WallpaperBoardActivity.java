@@ -56,7 +56,6 @@ import com.dm.wallpaper.board.helpers.ConfigurationHelper;
 import com.dm.wallpaper.board.helpers.InAppBillingHelper;
 
 import com.dm.wallpaper.board.helpers.LicenseCallbackHelper;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.items.InAppBilling;
 import com.dm.wallpaper.board.preferences.Preferences;
 import com.dm.wallpaper.board.receivers.WallpaperBoardReceiver;
@@ -74,7 +73,6 @@ import com.nostra13.universalimageloader.core.imageaware.ImageViewAware;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /*
  * Wallpaper Board
@@ -123,8 +121,7 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
     public void initMainActivity(@Nullable Bundle savedInstanceState, boolean isLicenseCheckerEnabled,
                                  @NonNull byte[] salt, @NonNull String licenseKey,
                                  @NonNull String[] donationProductsId) {
-        super.setTheme(Preferences.get(this).isDarkTheme() ?
-                R.style.AppThemeDark : R.style.AppTheme);
+        super.setTheme(R.style.AppThemeDark);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallpaper_board);
         ButterKnife.bind(this);
@@ -175,8 +172,7 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        LocaleHelper.setLocale(newBase);
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(newBase);
     }
 
     @Override
@@ -211,7 +207,6 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
         super.onConfigurationChanged(newConfig);
         resetNavigationView(newConfig.orientation);
         WindowHelper.resetNavigationBarTranslucent(this, WindowHelper.NavigationBarTranslucent.PORTRAIT_ONLY);
-        LocaleHelper.setLocale(this);
     }
 
     @Override
@@ -406,9 +401,7 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
         mDrawerLayout.setDrawerShadow(R.drawable.navigation_view_shadow, GravityCompat.START);
         mDrawerLayout.addDrawerListener(mDrawerToggle);
         ColorStateList colorStateList = ContextCompat.getColorStateList(this,
-                Preferences.get(this).isDarkTheme() ?
-                        R.color.navigation_view_item_highlight_dark :
-                        R.color.navigation_view_item_highlight);
+                        R.color.navigation_view_item_highlight_dark);
 
         MenuItem menuItem = mNavigationView.getMenu().findItem(R.id.navigation_view_donate);
         if (menuItem != null) {
@@ -418,9 +411,7 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
         mNavigationView.setItemTextColor(colorStateList);
         mNavigationView.setItemIconTintList(colorStateList);
         Drawable background = ContextCompat.getDrawable(this,
-                Preferences.get(this).isDarkTheme() ?
-                        R.drawable.navigation_view_item_background_dark :
-                        R.drawable.navigation_view_item_background);
+                        R.drawable.navigation_view_item_background_dark);
         mNavigationView.setItemBackground(background);
         mNavigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();

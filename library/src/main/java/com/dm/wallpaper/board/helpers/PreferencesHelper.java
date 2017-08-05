@@ -8,7 +8,6 @@ import android.support.annotation.NonNull;
 
 import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.applications.WallpaperBoardApplication;
-import com.dm.wallpaper.board.items.Language;
 
 import java.util.List;
 import java.util.Locale;
@@ -39,7 +38,6 @@ public class PreferencesHelper {
 
     private static final String KEY_LICENSED = "licensed";
     private static final String KEY_FIRST_RUN = "first_run";
-    private static final String KEY_DARK_THEME = "dark_theme";
     private static final String KEY_ROTATE_TIME = "rotate_time";
     private static final String KEY_ROTATE_MINUTE = "rotate_minute";
     private static final String KEY_WIFI_ONLY = "wifi_only";
@@ -50,8 +48,6 @@ public class PreferencesHelper {
     private static final String KEY_WALLPAPERS_INTRO = "wallpapers_intro";
     private static final String KEY_WALLPAPER_PREVIEW_INTRO = "wallpaper_preview_intro";
     private static final String KEY_COLORED_WALLPAPERS_CARD = "colored_wallpapers_card";
-    private static final String KEY_LANGUAGE_PREFERENCE = "language_preference2";
-    private static final String KEY_CURRENT_LOCALE = "current_locale";
     private static final String KEY_AUTO_INCREMENT = "auto_increment";
 
     public PreferencesHelper(@NonNull Context context) {
@@ -76,17 +72,6 @@ public class PreferencesHelper {
 
     void setFirstRun(boolean bool) {
         getSharedPreferences().edit().putBoolean(KEY_FIRST_RUN, bool).apply();
-    }
-
-    public boolean isDarkTheme() {
-        boolean useDarkTheme = mContext.getResources().getBoolean(R.bool.use_dark_theme);
-        boolean isThemingEnabled = WallpaperBoardApplication.getConfiguration().isDashboardThemingEnabled();
-        if (!isThemingEnabled) return useDarkTheme;
-        return getSharedPreferences().getBoolean(KEY_DARK_THEME, useDarkTheme);
-    }
-
-    public void setDarkTheme(boolean bool) {
-        getSharedPreferences().edit().putBoolean(KEY_DARK_THEME, bool).apply();
     }
 
     public boolean isColoredWallpapersCard() {
@@ -171,53 +156,6 @@ public class PreferencesHelper {
 
     public void setAvailableWallpapersCount(int count) {
         getSharedPreferences().edit().putInt(KEY_AVAILABLE_WALLPAPERS_COUNT, count).apply();
-    }
-
-    public Locale getCurrentLocale() {
-        String code = getSharedPreferences().getString(KEY_CURRENT_LOCALE, "en_US");
-        return LocaleHelper.getLocale(code);
-    }
-
-    public void setCurrentLocale(String code) {
-        getSharedPreferences().edit().putString(KEY_CURRENT_LOCALE, code).apply();
-    }
-
-    public boolean isTimeToSetLanguagePreference() {
-        return getSharedPreferences().getBoolean(KEY_LANGUAGE_PREFERENCE, true);
-    }
-
-    private void setTimeToSetLanguagePreference(boolean bool) {
-        getSharedPreferences().edit().putBoolean(KEY_LANGUAGE_PREFERENCE, bool).apply();
-    }
-
-    public void setLanguagePreference() {
-        Locale locale = Locale.getDefault();
-        List<Language> languages = LocaleHelper.getAvailableLanguages(mContext);
-
-        Locale currentLocale = null;
-        for (Language language : languages) {
-            Locale l = language.getLocale();
-            if (locale.toString().equals(l.toString())) {
-                currentLocale = l;
-                break;
-            }
-        }
-
-        if (currentLocale == null) {
-            for (Language language : languages) {
-                Locale l = language.getLocale();
-                if (locale.getLanguage().equals(l.getLanguage())) {
-                    currentLocale = l;
-                    break;
-                }
-            }
-        }
-
-        if (currentLocale != null) {
-            setCurrentLocale(currentLocale.toString());
-            LocaleHelper.setLocale(mContext);
-            setTimeToSetLanguagePreference(false);
-        }
     }
 
     public void setAutoIncrement(int value) {

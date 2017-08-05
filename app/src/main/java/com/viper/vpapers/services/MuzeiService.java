@@ -1,10 +1,10 @@
-package org.viperos.vpapers.services;
+package com.viper.vpapers.services;
 
 import android.content.Intent;
 
-import org.viperos.vpapers.R;
 import com.dm.wallpaper.board.services.WallpaperBoardMuzeiService;
 import com.google.android.apps.muzei.api.RemoteMuzeiArtSource;
+import com.viper.vpapers.R;
 
 public class MuzeiService extends WallpaperBoardMuzeiService{
 

@@ -19,7 +19,6 @@ import com.danimahardhika.android.helpers.core.DrawableHelper;
 import com.danimahardhika.android.helpers.core.FileHelper;
 import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.R2;
-import com.dm.wallpaper.board.fragments.dialogs.LanguagesFragment;
 import com.dm.wallpaper.board.helpers.TypefaceHelper;
 import com.dm.wallpaper.board.items.Setting;
 import com.dm.wallpaper.board.preferences.Preferences;
@@ -200,13 +199,6 @@ public class SettingsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                                     }
                                 })
                                 .show();
-                        break;
-                    case THEME:
-                        Preferences.get(mContext).setDarkTheme(!checkBox.isChecked());
-                        ((AppCompatActivity) mContext).recreate();
-                        break;
-                    case LANGUAGE:
-                        LanguagesFragment.showLanguageChooser(((AppCompatActivity) mContext).getSupportFragmentManager());
                         break;
                     case COLORED_CARD:
                         Preferences.get(mContext).setColoredWallpapersCard(

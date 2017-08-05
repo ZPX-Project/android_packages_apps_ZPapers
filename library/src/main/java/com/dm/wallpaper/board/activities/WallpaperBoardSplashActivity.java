@@ -13,11 +13,9 @@ import android.widget.TextView;
 
 import com.danimahardhika.android.helpers.core.ColorHelper;
 import com.dm.wallpaper.board.R;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.utils.LogUtil;
 
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /*
  * Wallpaper Board
@@ -61,8 +59,7 @@ public class WallpaperBoardSplashActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        LocaleHelper.setLocale(newBase);
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(newBase);
     }
 
     @Override

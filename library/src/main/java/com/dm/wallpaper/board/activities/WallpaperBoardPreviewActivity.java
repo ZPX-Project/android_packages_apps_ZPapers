@@ -40,7 +40,6 @@ import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.R2;
 import com.dm.wallpaper.board.adapters.WallpapersAdapter;
 import com.dm.wallpaper.board.fragments.dialogs.WallpaperSettingsFragment;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.helpers.TapIntroHelper;
 import com.dm.wallpaper.board.helpers.TypefaceHelper;
 import com.dm.wallpaper.board.helpers.ViewHelper;
@@ -60,7 +59,6 @@ import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 /*
@@ -107,8 +105,7 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.setTheme(Preferences.get(this).isDarkTheme() ?
-                R.style.WallpaperThemeDark : R.style.WallpaperTheme);
+        super.setTheme(R.style.WallpaperThemeDark);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallpaper_preview);
         ButterKnife.bind(this);
@@ -220,7 +217,6 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         ViewHelper.resetViewBottomMargin(mFab);
-        LocaleHelper.setLocale(this);
     }
 
     @Override
@@ -233,8 +229,7 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        LocaleHelper.setLocale(newBase);
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(newBase);
     }
 
     @Override

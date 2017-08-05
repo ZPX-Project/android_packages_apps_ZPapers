@@ -7,7 +7,6 @@ import android.support.annotation.NonNull;
 
 import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.activities.WallpaperBoardCrashReport;
-import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.helpers.UrlHelper;
 import com.dm.wallpaper.board.preferences.Preferences;
 import com.dm.wallpaper.board.utils.ImageConfig;
@@ -18,8 +17,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /*
  * Wallpaper Board
@@ -62,11 +59,6 @@ public class WallpaperBoardApplication extends Application {
         if (!ImageLoader.getInstance().isInited())
             ImageLoader.getInstance().init(ImageConfig.getImageLoaderConfiguration(this));
 
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Font-Regular.ttf")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
-
         //Enable logging
         LogUtil.setLoggingEnabled(true);
 
@@ -89,13 +81,6 @@ public class WallpaperBoardApplication extends Application {
                 mConfiguration.setCrashReportEmail(null);
             }
         }
-
-        if (Preferences.get(this).isTimeToSetLanguagePreference()) {
-            Preferences.get(this).setLanguagePreference();
-            return;
-        }
-
-        LocaleHelper.setLocale(this);
     }
 
     private void handleUncaughtException(Thread thread, Throwable throwable) {

@@ -1,4 +1,4 @@
-package org.viperos.vpapers.activities;
+package com.viper.vpapers.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
