@@ -102,7 +102,6 @@ public class SettingsFragment extends Fragment {
                         formatter.format(cache) + " MB"),
                 Setting.Type.CACHE, -1));
 
-
         settings.add(new Setting(R.drawable.ic_toolbar_wallpapers,
                 getActivity().getResources().getString(R.string.pref_wallpaper_header),
                 "", "", "", Setting.Type.HEADER, -1));

@@ -29,7 +29,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dm.wallpaper.board.helpers.TypefaceHelper;
 import com.danimahardhika.android.helpers.animation.AnimationHelper;
 import com.danimahardhika.android.helpers.core.ColorHelper;
 import com.danimahardhika.android.helpers.core.DrawableHelper;
@@ -43,6 +42,7 @@ import com.dm.wallpaper.board.adapters.WallpapersAdapter;
 import com.dm.wallpaper.board.fragments.dialogs.WallpaperSettingsFragment;
 import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.helpers.TapIntroHelper;
+import com.dm.wallpaper.board.helpers.TypefaceHelper;
 import com.dm.wallpaper.board.helpers.ViewHelper;
 import com.dm.wallpaper.board.helpers.WallpaperHelper;
 import com.dm.wallpaper.board.preferences.Preferences;
@@ -113,7 +113,6 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
         setContentView(R.layout.activity_wallpaper_preview);
         ButterKnife.bind(this);
 
-
         ViewHelper.resetViewBottomMargin(mFab);
         ColorHelper.setStatusBarColor(this, ColorHelper.get(this, R.color.wallpaperStatusBar), true);
         mIsEnter = true;
@@ -143,7 +142,14 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
         }
 
         toolbarTitle.setText(mName);
-        toolbarSubTitle.setText(mAuthor);
+
+        if (mAuthor == null) {
+            toolbarSubTitle.setVisibility(View.GONE);
+        } else {
+            toolbarSubTitle.setText(mAuthor);
+            toolbarSubTitle.setVisibility(View.VISIBLE);
+        }
+
         toolbar.setTitle("");
         toolbar.setNavigationIcon(R.drawable.ic_toolbar_back);
         setSupportActionBar(toolbar);
@@ -176,6 +182,7 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
                                     .duration(300)
                                     .interpolator(new LinearOutSlowInInterpolator())
                                     .start();
+
                             loadWallpaper(mUrl);
                         }
                     }
@@ -226,8 +233,8 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
         LocaleHelper.setLocale(newBase);
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override

@@ -47,8 +47,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.MinSdk
         targetSdkVersion rootProject.ext.TargetSdk
-        versionCode 129
-        versionName "1.2.9"
+        versionCode 131
+        versionName "1.3.1"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -96,7 +96,7 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'com.afollestad.material-dialogs:core:0.9.4.3'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
-    compile 'com.anjlab.android.iab.v3:library:1.0.38'
+    compile 'com.anjlab.android.iab.v3:library:1.0.40'
     compile 'com.github.chrisbanes:PhotoView:1.3.1'
     compile 'com.google.android.apps.muzei:muzei-api:2.0'
     compile 'com.github.danimahardhika:DrawMe:4a672e78fc'
@@ -105,7 +105,7 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:10.2.4'
     compile 'com.google.firebase:firebase-core:10.2.4'
 
-    compile 'com.github.danimahardhika:cafebar:1.1.4'
+    compile 'com.github.danimahardhika:cafebar:1.1.5'
     compile 'com.github.danimahardhika.android-helpers:core:0.0.5'
     compile 'com.github.danimahardhika.android-helpers:animation:0.0.5'
     compile 'com.github.danimahardhika.android-helpers:license:0.0.5'

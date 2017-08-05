@@ -155,7 +155,7 @@ public class WallpaperOptionsFragment extends DialogFragment implements View.OnC
                             .autoDismiss(false)
                             .fitSystemWindow()
                             .maxLines(4)
-                            .typeface(TypefaceHelper.getMedium(getActivity()), TypefaceHelper.getRegular(getActivity()))
+                            .typeface(TypefaceHelper.getRegular(context), TypefaceHelper.getBold(context))
                             .content(String.format(getResources().getString(R.string.wallpaper_download_exist),
                                     ("\"" +mName + WallpaperHelper.IMAGE_EXTENSION+ "\"")))
                             .icon(R.drawable.ic_toolbar_download)
