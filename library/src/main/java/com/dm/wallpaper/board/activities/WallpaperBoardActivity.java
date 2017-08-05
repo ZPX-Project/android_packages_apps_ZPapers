@@ -118,13 +118,22 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
     private String mLicenseKey;
     private String[] mDonationProductsId;
 
+    private String mPackageName;
+
+    private String mMainActivity;
+
     public void initMainActivity(@Nullable Bundle savedInstanceState, boolean isLicenseCheckerEnabled,
                                  @NonNull byte[] salt, @NonNull String licenseKey,
-                                 @NonNull String[] donationProductsId) {
+                                 @NonNull String[] donationProductsId,
+                                 @NonNull String packageName,
+                                 @NonNull String mainActivity) {
         super.setTheme(R.style.AppThemeDark);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wallpaper_board);
         ButterKnife.bind(this);
+
+        mPackageName = packageName;
+        mMainActivity = mainActivity;
 
         WindowHelper.resetNavigationBarTranslucent(this,
                 WindowHelper.NavigationBarTranslucent.PORTRAIT_ONLY);
@@ -582,7 +591,12 @@ public class WallpaperBoardActivity extends AppCompatActivity implements Activit
             return new FavoritesFragment();
         } else if (position == 2) {
             mFragmentTag = Extras.TAG_SETTINGS;
-            return new SettingsFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("packageName", mPackageName);
+            bundle.putString("mainActivity", mMainActivity);
+            SettingsFragment settingsFragment = new SettingsFragment();
+            settingsFragment.setArguments(bundle);
+            return settingsFragment;
         } else if (position == 3) {
             mFragmentTag = Extras.TAG_ABOUT;
             return new AboutFragment();

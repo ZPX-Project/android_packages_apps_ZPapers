@@ -13,6 +13,8 @@ public class MainActivity extends WallpaperBoardActivity {
                 License.isLicenseCheckerEnabled(),
                 License.getRandomString(),
                 License.getLicenseKey(),
-                License.getDonationProductsId());
+                License.getDonationProductsId(),
+                getApplicationContext().getPackageName(),
+                SplashActivity.class.getName());
     }
 }

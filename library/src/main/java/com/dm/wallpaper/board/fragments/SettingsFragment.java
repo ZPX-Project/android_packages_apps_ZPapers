@@ -52,9 +52,14 @@ public class SettingsFragment extends Fragment {
     @BindView(R2.id.recyclerview)
     RecyclerView mRecyclerView;
 
+    private String mPackageName;
+    private String mMainActivity;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mPackageName =  getArguments().getString("packageName");
+        mMainActivity =  getArguments().getString("mainActivity");
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         ButterKnife.bind(this, view);
 
@@ -122,9 +127,13 @@ public class SettingsFragment extends Fragment {
                 "", "", Setting.Type.COLORED_CARD, Preferences.get(getActivity()).isColoredWallpapersCard() ? 1 : 0));
 
         settings.add(new Setting(-1, "",
+                getActivity().getResources().getString(R.string.pref_others_hide_from_launcher),
+                getActivity().getResources().getString(R.string.pref_others_hide_from_launcher_desc), "", Setting.Type.HIDE_FROM_LAUNCHER, Preferences.get(getActivity()).isHiddenFromLauncher() ? 1 : 0));
+
+        settings.add(new Setting(-1, "",
                 getActivity().getResources().getString(R.string.pref_others_reset_tutorial),
                 "", "", Setting.Type.RESET_TUTORIAL, -1));
 
-        mRecyclerView.setAdapter(new SettingsAdapter(getActivity(), settings));
+        mRecyclerView.setAdapter(new SettingsAdapter(getActivity(), settings, mPackageName,mMainActivity));
     }
 }

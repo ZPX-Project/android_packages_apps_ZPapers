@@ -48,6 +48,7 @@ public class PreferencesHelper {
     private static final String KEY_WALLPAPERS_INTRO = "wallpapers_intro";
     private static final String KEY_WALLPAPER_PREVIEW_INTRO = "wallpaper_preview_intro";
     private static final String KEY_COLORED_WALLPAPERS_CARD = "colored_wallpapers_card";
+    private static final String KEY_HIDE_FROM_LAUNCHER = "hide_from_launcher";
     private static final String KEY_AUTO_INCREMENT = "auto_increment";
 
     public PreferencesHelper(@NonNull Context context) {
@@ -80,6 +81,14 @@ public class PreferencesHelper {
 
     public void setColoredWallpapersCard(boolean bool) {
         getSharedPreferences().edit().putBoolean(KEY_COLORED_WALLPAPERS_CARD, bool).apply();
+    }
+
+    public boolean isHiddenFromLauncher() {
+        return getSharedPreferences().getBoolean(KEY_HIDE_FROM_LAUNCHER, false);
+    }
+
+    public void setHiddenFromLauncher(boolean bool) {
+        getSharedPreferences().edit().putBoolean(KEY_HIDE_FROM_LAUNCHER, bool).apply();
     }
 
     public boolean isShadowEnabled() {

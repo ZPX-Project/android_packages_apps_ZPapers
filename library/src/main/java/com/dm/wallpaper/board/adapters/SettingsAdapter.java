@@ -1,6 +1,8 @@
 package com.dm.wallpaper.board.adapters;
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatCheckBox;
@@ -54,13 +56,17 @@ public class SettingsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private final Context mContext;
     private final List<Setting> mSettings;
+    private String mPackageName = null;
+    private String mMainActivity = null;
 
     private static final int TYPE_CONTENT = 0;
     private static final int TYPE_FOOTER = 1;
 
-    public SettingsAdapter(@NonNull Context context, @NonNull List<Setting> settings) {
+    public SettingsAdapter(@NonNull Context context, @NonNull List<Setting> settings, @NonNull String packageName, @NonNull String mainActivity) {
         mContext = context;
         mSettings = settings;
+        mPackageName = packageName;
+        mMainActivity = mainActivity;
     }
 
     @Override
@@ -204,6 +210,22 @@ public class SettingsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                         Preferences.get(mContext).setColoredWallpapersCard(
                                 !Preferences.get(mContext).isColoredWallpapersCard());
                         checkBox.setChecked(Preferences.get(mContext).isColoredWallpapersCard());
+                        break;
+                    case HIDE_FROM_LAUNCHER:
+                        Preferences.get(mContext).setHiddenFromLauncher(
+                                !Preferences.get(mContext).isHiddenFromLauncher());
+
+                        PackageManager pkg = mContext.getPackageManager();
+                        if (Preferences.get(mContext).isHiddenFromLauncher()){
+                            pkg.setComponentEnabledSetting(new ComponentName(mPackageName,mMainActivity),
+                                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                                    PackageManager.DONT_KILL_APP);
+                        }else{
+                            pkg.setComponentEnabledSetting(new ComponentName(mPackageName,mMainActivity),
+                                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                                    PackageManager.DONT_KILL_APP);
+                        }
+                        checkBox.setChecked(Preferences.get(mContext).isHiddenFromLauncher());
                         break;
                     case RESET_TUTORIAL:
                         Preferences.get(mContext).setTimeToShowWallpapersIntro(true);

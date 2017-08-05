@@ -81,6 +81,7 @@ public class Setting {
        CACHE,
        WALLPAPER,
        COLORED_CARD,
+       HIDE_FROM_LAUNCHER,
        RESET_TUTORIAL
    }
 }

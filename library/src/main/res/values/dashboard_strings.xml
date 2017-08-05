@@ -117,6 +117,10 @@
 
     <string name="pref_others_header">Others</string>
     <string name="pref_others_colored_wallpaper_card">Colored Wallpaper Card</string>
+
+    <string name="pref_others_hide_from_launcher">Hide launcher icon</string>
+    <string name="pref_others_hide_from_launcher_desc">You may need to restart your device for the icon to be reloaded in the launcher</string>
+
     <string name="pref_others_reset_tutorial">Reset Tutorial</string>
     <string name="pref_others_reset_tutorial_reset">Tutorial Reset</string>
 
