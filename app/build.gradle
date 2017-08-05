@@ -15,11 +15,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.aospextended.aexpapers"
+        applicationId "org.viperos.vpapers"
         minSdkVersion rootProject.ext.MinSdk
         targetSdkVersion rootProject.ext.TargetSdk
         versionCode 44
-        versionName "4.4"
+        versionName "3.0"
         vectorDrawables.useSupportLibrary = true
     }
 

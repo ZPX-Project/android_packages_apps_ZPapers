@@ -1,9 +1,9 @@
-package org.aospextended.aexpapers.activities;
+package org.viperos.vpapers.activities;
 
 import android.os.Bundle;
 
 import com.dm.wallpaper.board.activities.WallpaperBoardActivity;
-import org.aospextended.aexpapers.licenses.License;
+import org.viperos.vpapers.licenses.License;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends WallpaperBoardActivity {

@@ -1,4 +1,4 @@
-package org.aospextended.aexpapers.applications;
+package org.viperos.vpapers.applications;
 
 import com.dm.wallpaper.board.applications.WallpaperBoardApplication;
 

@@ -1,4 +1,4 @@
-package org.aospextended.aexpapers.activities;
+package viperos.vpapers.activities;
 
 import android.util.Log;
 

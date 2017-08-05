@@ -12,8 +12,8 @@
     <string name="navigation_view_rate">Envie seu papel de parede</string>
 
     <!-- Share app -->
-    <string name="share_app_subject">Yo! Confira %s</string>
-    <string name="share_app_body">Confira %1$s,  este aplicativo de papel de parede é realmente legal! %2$s</string>
+    <string name="share_app_subject">Ei! Confira %s</string>
+    <string name="share_app_body">Ei Confira %1$s, este aplicativo de papel de parede é realmente legal! %2$s</string>
 
     <!-- Menu -->
     <string name="menu_search">Pesquisar</string>
@@ -104,8 +104,7 @@
     <!-- Preferences -->
     <string name="pref_data_header">Data &amp; Cache</string>
     <string name="pref_data_cache">Limpar o cache</string>
-    <string name="pref_data_cache_desc">Remova o cache de imagem criado em sua memoria
-    Depois de carregar as miniaturas de papel de parede da nuvem</string>
+    <string name="pref_data_cache_desc">Remova o cache de imagem criado em sua memoria depois de carregar as miniaturas de papel de parede da nuvem</string>
     <string name="pref_data_cache_size">Tamanho do cache: %s</string>
     <string name="pref_data_cache_cleared">Cache apagado</string>
     <string name="pref_data_cache_clear_dialog">Você realmente deseja limpar o cache?</string>
@@ -117,7 +116,7 @@
     <string name="pref_language_header">Linguagem</string>
 
     <string name="pref_others_header">Outros</string>
-    <string name="pref_others_colored_wallpaper_card">Cartão de papel de parede colorido</string>
+    <string name="pref_others_colored_wallpaper_card">Efeito cartão de papel de parede colorido</string>
     <string name="pref_others_reset_tutorial">Resetar Tutorial</string>
     <string name="pref_others_reset_tutorial_reset">Tutorial Resetado</string>
 

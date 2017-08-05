@@ -9,7 +9,7 @@
 
     <!-- CONFIG: APPLICATION NAME -->
 
-    <string name="app_name">AEXPapers</string>
+    <string name="app_name">VPapers</string>
 
     <!-- Enable or disable shadow
     * Include:
@@ -19,18 +19,18 @@
     <!-- CONFIG: MUZEI -->
 
     <!-- Muzei art source name -->
-    <string name="muzei_art_source_name">AEXPapers</string>
+    <string name="muzei_art_source_name">VPapers</string>
 
     <!-- Muzei art source description -->
-    <string name="muzei_art_source_desc">Walls branded for AospExtended ROM</string>
+    <string name="muzei_art_source_desc">Walls branded for ViperOS ROM</string>
 
     <!-- Muzei base color -->
-    <color name="muzei_color">#F44336</color>
+    <color name="muzei_color">@android:color/black</color>
 
     <!-- CONFIG: TOOLBAR -->
 
     <!-- Toolbar title -->
-    <string name="toolbar_title">AEXPapers</string>
+    <string name="toolbar_title">VPapers</string>
 
     <!-- CONFIG: Wallpapers -->
 
@@ -41,14 +41,14 @@
     <string name="dev_email">coolsks94@gmail.com</string>
 
     <!-- Wallpaper json link -->
-    <string name="wallpaper_json">https://raw.githubusercontent.com/ishubhamsingh/AEXPapers/7.x/app/json/wallpaper_config.json</string>
+    <string name="wallpaper_json">https://raw.githubusercontent.com/Andersonmendes2016/VPapers/nougat/app/json/wallpaper_config.json</string>
 
     <!-- Allow to download wallpaper
     * If disabled user only able to apply wallpaper from dashboard -->
     <bool name="enable_wallpaper_download">true</bool>
 
 
-    <string name="splash_screen_title">AOSPEXTENDED PAPERS</string>
+    <string name="splash_screen_title">VIPEROS PAPERS</string>
 
     <!-- Wallpapers grid preview quality
     * Image quality when displaying wallpapers in grid
@@ -69,7 +69,7 @@
     * ex: navigation_view_header.png -> navigation_view_header
     * If you want to use solid color, you can put hex color code here
     * ex: <string name="navigation_view_header">#000000</string> -->
-    <string name="navigation_view_header">https://raw.githubusercontent.com/ishubhamsingh/AEXPapers/7.x/app/extra/navigation_view_header.png</string>
+    <string name="navigation_view_header">http://i.imgur.com/w3wuOIl.jpg</string>
 
     <!-- Navigation view header style
     * Available choices:
@@ -80,7 +80,7 @@
 
     <!-- Navigation view header text
     * Leave empty if you don't want to show any text -->
-    <string name="navigation_view_header_title">AEXPapers</string>
+    <string name="navigation_view_header_title">ViperOS Wallpapers</string>
 
 
     <!-- CONFIG: ABOUT -->
@@ -91,20 +91,20 @@
     * just put image name here without the extension (ex: about_image.png -> about_image)
     * If you want to use solid color, you can put hex color code here
     * ex: <string name="about_image">#000000</string> -->
-    <string name="about_image">https://raw.githubusercontent.com/ishubhamsingh/AEXPapers/7.x/app/extra/navigation_view_header.png</string>
+    <string name="about_image">http://i.imgur.com/Q2FxZ2K.png</string>
 
     <!-- About profile image
     * If you want to use image from url, just put the url here
     * If you want to use image stored in project (drawable folder)
     * just put image name here without the extension (ex: about_profile_image.png -> about_profile_image) -->
-    <string name="about_profile_image">https://github.com/AospExtended/manifest/raw/7.1.1/aex_logo.png</string>
+    <string name="about_profile_image">http://i.imgur.com/WFXseT2.png</string>
 
     <!-- About title above description -->
-    <string name="about_title">AEXPapers</string>
+    <string name="about_title">VPapers</string>
 
     <!-- About description below title -->
     <string name="about_desc"><![CDATA[
-        <b>A wallpaper app for user contributed AospExtended branded walls.<b>
+        <b>A wallpaper app for user contributed ViperOS branded walls.<b>
         ]]></string>
 
     <!-- Social link inside about
@@ -116,10 +116,10 @@
     * ex:
 +    * <string-array name="about_social_links"></string-array>-->
     <string-array name="about_social_links">
-        <item>https://plus.google.com/communities/106726906578669931141</item>
-        <item>http://github.com/AospExtended</item>
-        <item>http://aospextended.imgur.com/</item>
-        <item>aospextended@gmail.com</item>
+        <item>https://plus.google.com/communities/112731559207528820150</item>
+        <item>https://github.com/ViperOS-Project</item>
+        <item>http://vpapers.imgur.com</item>
+        <item>viperosbrasil@gmail.com</item>
     </string-array>
 
     <!-- Contributors dialog

@@ -1,8 +1,8 @@
-package org.aospextended.aexpapers.services;
+package org.viperos.vpapers.services;
 
 import android.content.Intent;
 
-import org.aospextended.aexpapers.R;
+import org.viperos.vpapers.R;
 import com.dm.wallpaper.board.services.WallpaperBoardMuzeiService;
 import com.google.android.apps.muzei.api.RemoteMuzeiArtSource;
 

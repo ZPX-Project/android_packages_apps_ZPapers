@@ -1,4 +1,4 @@
-package org.aospextended.aexpapers.activities;
+package org.viperos.vpapers.activities;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -15,7 +15,9 @@ import com.firebase.jobdispatcher.Job;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-import org.aospextended.aexpapers.R;
+import org.viperos.vpapers.activities.MainActivity;
+import org.viperos.vpapers.activities.MyJobService;
+import org.viperos.vpapers.R;
 
 /**
  * Created by ishubhamsingh on 5/24/17.

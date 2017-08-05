@@ -9,7 +9,7 @@
 
     <!-- CONFIG: APPLICATION NAME -->
 
-    <string name="app_name">WallpaperBoard Demo</string>
+    <string name="app_name">VPapers</string>
 
     <!-- CONFIG: DEFAULT THEME -->
 
@@ -29,7 +29,7 @@
     <!-- CONFIG: TOOLBAR -->
 
     <!-- Toolbar title -->
-    <string name="toolbar_title">Wallpaper Board</string>
+    <string name="toolbar_title">VPapers</string>
 
     <!-- CONFIG: Wallpapers -->
 
