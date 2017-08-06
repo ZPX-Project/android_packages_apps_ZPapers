@@ -37,7 +37,7 @@
     <string name="dev_email" translatable="false"></string>
 
     <!-- Wallpaper json link -->
-    <string name="wallpaper_json" translatable="false">https://raw.githubusercontent.com/Andersonmendes2016/VPapers/nougat/app/json/wallpaper_config.json</string>
+    <string name="wallpaper_json" translatable="false">https://download.viper-os.com/api/vpapers.php</string>
 
     <!-- Allow to download wallpaper
     * If disabled user only able to apply wallpaper from dashboard -->
