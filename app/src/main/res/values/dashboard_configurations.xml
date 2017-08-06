@@ -9,14 +9,6 @@
 
 
 
-    <!-- CONFIG: APPLICATION NAME -->
-
-    <string name="app_name" translatable="false">VPapers</string>
-
-    <!-- CONFIG: MUZEI -->
-
-    <!-- Muzei art source name -->
-    <string name="muzei_art_source_name" translatable="false">VPapers</string>
 
     <!-- Enable or disable shadow
     * Include:
@@ -115,9 +107,5 @@
     <bool name="enable_donation">false</bool>
 
     <!-- Take a look inside License.java for donation product -->
-    <!-- CONFIG: ABOUT -->
-
-    <!-- About title above description -->
-    <string name="about_title">VPapers</string>
 
 </resources>

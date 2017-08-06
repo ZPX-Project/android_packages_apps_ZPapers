@@ -113,4 +113,10 @@
 
     <!-- Take a look inside License.java for donation product -->
 
+    <!-- Please don't modify this -->
+    <string name="about_dashboard" translatable="false">Wallpaper Board</string>
+    <string name="about_dashboard_dev_google_plus_url" translatable="false">https://plus.google.com/u/1/+DaniMahardhika</string>
+    <string name="about_dashboard_dev_github_url" translatable="false">https://github.com/danimahardhika</string>
+    <string name="about_dashboard_dev_instagram_url" translatable="false">https://www.instagram.com/_u/danimahardhika112/</string>
+
 </resources>
