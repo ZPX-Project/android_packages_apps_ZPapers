@@ -10,6 +10,8 @@
   <string name="navigation_view_share">Поделиться</string>
   <string name="navigation_view_rate">Оценить</string>
   <!-- Share app -->
+  <string name="share_app_subject">Эй! Зацени %s</string>
+  <string name="share_app_body">Зацени %1$s, офигенное же приложение с крутыми обоями! %2$s</string>
   <!-- Menu -->
   <string name="menu_search">Поиск</string>
   <string name="menu_filter">Фильтр</string>
@@ -34,6 +36,8 @@
   <string name="tap_intro_wallpapers_favorite">Избранные обои</string>
   <string name="tap_intro_wallpapers_favorite_desc">Нажми здесь для добавления обои в избранные</string>
   <string name="tap_intro_wallpaper_preview_settings">Настройки обои</string>
+  <string name="tap_intro_wallpaper_preview_settings_desc">Нажмите здесь для открытия свойств обоев.
+        Установить обои на экран блокировки (для Android Nougat) или обрезать.</string>
   <string name="tap_intro_wallpaper_preview_save">Сохранить обои</string>
   <string name="tap_intro_wallpaper_preview_save_desc">Нажмите, чтобы сохранить обои на ваше устройство</string>
   <string name="tap_intro_wallpaper_preview_apply">Установить как обои</string>
@@ -55,8 +59,12 @@
   <string name="wallpaper_apply_cancelled">Применение обои отменено</string>
   <string name="connection_failed">Не удалось получить данные с сервера</string>
   <string name="wallpaper_apply">Установить как обои</string>
+  <string name="wallpaper_apply_crop">После применения этого параметра, обрезка обоев будет отключена</string>
   <string name="wallpaper_settings_crop">Обрезать</string>
+  <string name="wallpaper_settings_crop_desc">Разрешить обрезку обоев. Обои будут обрезаны согласно предварительному просмотру.        Изменить размер можно щипком или двойным нажатием.</string>
   <string name="wallpaper_settings_lockscreen">Фон экрана блокировки</string>
+  <string name="wallpaper_settings_lockscreen_desc">Обои будут установлены на домашний экран и на экран блокировки</string>
+  <string name="wallpaper_settings_lockscreen_not_available">Обои на экране блокировки доступны только на Android Nougat</string>
   <string name="wallpaper_favorite_added">%s добавлено Избранное</string>
   <string name="wallpaper_favorite_removed">%s удалено из Избранного</string>
   <!-- Muzei -->
@@ -89,20 +97,27 @@
   <string name="pref_wallpaper_location_desc">Сначала загрузите хотя бы один фоновый рисунок</string>
   <string name="pref_others_header">Другие</string>
   <string name="pref_others_colored_wallpaper_card">Цветные карточки</string>
+  <string name="pref_others_hide_from_launcher">Скрыть значок лаунчера</string>
   <string name="pref_others_reset_tutorial">Сбросить обучение</string>
   <string name="pref_others_reset_tutorial_reset">Сбросить обучение</string>
   <!-- Permission -->
   <string name="permission_storage_denied">Необходимо разрешить для сохранения фонового изображения</string>
   <!-- Support Development -->
+  <string name="donation_success">Спасибо за пожертвование. Используем полученные средства с умом.</string>
   <!-- License -->
   <string name="license_checking">Проверка лицензии</string>
   <string name="license_check">Проверка лицензии</string>
   <string name="license_check_success">Проверка лицензии завершена, спасибо за приобретение продукта!</string>
+  <string name="license_check_failed">Ошибка проверки лицензии. Возможно, вы скачали это приложение не в Play Store.        Запуск приложения невозможен.</string>
+  <string name="license_check_retry">Не удается проверить лицензию, повторите попытку позже</string>
   <!-- Search -->
+  <string name="search_result_empty">Ничего по запросу \"%s\" не найдено</string>
   <!-- Crash Report -->
   <string name="crash_report">Отчет о сбое</string>
+  <string name="crash_report_message">Сожалеем, но %s не отвечает. Чтобы помочь разработчику в исправлении ошибки, отправьте отчет.</string>
   <string name="crash_report_send">Отправить отчет</string>
   <string name="email_client">Выберите почтовый клиент</string>
+  <string name="about_dashboard_dev">Wallpaper Board - свободно распространяемое по лицензии Apache License 2.0 программное обеспечение для Android, разработанное Dani Mahardhika и доступное на GitHub.</string>
   <string name="about_dashboard_contributors">Соавторы</string>
   <string name="about_dashboard_translator">Переводчики</string>
   <!-- DrawerToggle -->
