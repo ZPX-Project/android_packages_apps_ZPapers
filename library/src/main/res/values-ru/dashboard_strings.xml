@@ -29,7 +29,8 @@
   <string name="tap_intro_wallpapers_search_desc">Нажми здесь для поиска</string>
   <string name="tap_intro_wallpapers_filter">Фильтр</string>
   <string name="tap_intro_wallpapers_filter_desc">Нажми здесь для фильтрации по категориям</string>
-  <string name="tap_intro_wallpapers_option">Настройки обои</string>
+  <string name="tap_intro_wallpapers_option">Настройки обоев</string>
+  <string name="tap_intro_wallpapers_option_desc">Долгое нажатие откроет параметры обоев %s.</string>
   <string name="tap_intro_wallpapers_option_desc_download">скачать или</string>
   <string name="tap_intro_wallpapers_preview">Просмотр обои</string>
   <string name="tap_intro_wallpapers_preview_desc">Нажми здесь для просмотра в полном размере</string>
@@ -98,6 +99,7 @@
   <string name="pref_others_header">Другие</string>
   <string name="pref_others_colored_wallpaper_card">Цветные карточки</string>
   <string name="pref_others_hide_from_launcher">Скрыть значок лаунчера</string>
+  <string name="pref_others_hide_from_launcher_desc">Вероятно, потребуется перезагрузка устройства для обновление иконки в лаунчере</string>
   <string name="pref_others_reset_tutorial">Сбросить обучение</string>
   <string name="pref_others_reset_tutorial_reset">Сбросить обучение</string>
   <!-- Permission -->
